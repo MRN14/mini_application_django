@@ -4,8 +4,9 @@ from django.db import models
 #     name = models.CharField()
 
 class Product(models.Model):
-    ref = models.CharField(max_length=48, primary_key=True),
-    name = models.CharField(),
+    ref = models.CharField(max_length=48, primary_key=True)
+    name = models.CharField(max_length=48)
     stock = models.PositiveBigIntegerField(default=0)
     # manufacturer = models.ForeignKey(Manufacturer, on_delete=models.PROTECT)
+
 
