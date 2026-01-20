@@ -1,3 +1,10 @@
+# ~/projects/django-web-app/merchex/listings/views.py
+
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+def home(request):
+    return render(request, "magasin/index.html")
+
+def list(request):
+    return render(request, "magasin/products/list.html")
