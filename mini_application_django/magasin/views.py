@@ -7,5 +7,9 @@ def home(request):
 
 def list(request):
     products = Product.objects.all()
-    context = {"products": products}
+    count = Product.objects.count()
+    context = {
+        "products": products,
+        "count" : count
+    }
     return render(request, "magasin/products/list.html", context)
