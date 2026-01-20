@@ -2,6 +2,13 @@
 
 <main>
 	<h1>Liste des produits</h1>
+	{% if products %}
+		<ul>
+			{% for product in products %}
+				<li>{{product.name}}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
 </main>
 
 {% include "magasin/includes/foot.html" %}
