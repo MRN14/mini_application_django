@@ -1,9 +1,6 @@
-{% include "magasin/includes/head.html" %}
+{% extends "magasin/includes/base.html" %}
 
-<main>
+{% block content %}
 	<h1>Hello Home!</h1>
 	<a href="/produits">voir le magasin</a>
-</main>
-
-
-{% include "magasin/includes/foot.html" %}
+{% endblock %}

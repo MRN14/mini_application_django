@@ -1,18 +1,34 @@
-{% include "magasin/includes/head.html" %}
+{% extends "magasin/includes/base.html" %}
 
-<main>
+{% block content %}
+
 	<h1>Liste des produits</h1>
 	{% if products %}
-		<p>{{count}}
-			résultats</p>
-		<ul>
-			{% for product in products %}
-				<li>{{product.name}}</li>
-			{% endfor %}
-		</ul>
+		<table>
+			<caption>
+				{{count}}
+				résultats
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">référence</th>
+					<th scope="col">nom</th>
+					<th scope="col">stock</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for product in products %}
+					<tr>
+						<td>
+							<a href="/produit/{{product.ref}}">{{product.ref}}</a>
+						</td>
+						<td>{{product.name}}</td>
+						<td>{{product.stock}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
 	{% else %}
 		<p>Aucun produit trouvé</p>
 	{% endif %}
-</main>
-
-{% include "magasin/includes/foot.html" %}
+{% endblock %}
