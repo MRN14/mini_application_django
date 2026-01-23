@@ -35,9 +35,9 @@ Le projet doit être remis 1 semaine avant le rendez-vous physique par mail avec
 ## instructions
 
 1. Assurez-vous d'avoir installé [python](https://www.python.org/downloads/)
-2. Complétez le `.env.exemple`
-3. Assurez-vous d'installer toutes les dépendances dans `requirement.txt` avec `pip`
-4. Déplacez vous dans le dossier de l'application avec `cd mini_application_django`
+2. Assurez-vous d'installer toutes les dépendances dans `requirement.txt` avec `pip`
+3. Déplacez vous dans le dossier de l'application avec `cd mini_application_django`
+4. Complétez le `.env.exemple`
 5. Créez un administrateur avec `python manage.py createuser`
 6. Lancez l'application sur le port `8000` avec `python manage.py runserver``
 7. Ouvrez `http://localhost:8000/` dans votre navigateur
