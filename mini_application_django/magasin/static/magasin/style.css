@@ -20,3 +20,31 @@ nav {
 main {
     margin: 24px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: solid 1px;
+    padding: 8px;
+}
+
+td:last-of-type {
+    text-align: center;
+}
+
+caption {
+    font-weight: bold;
+    text-align: left;
+}
+
+.outstock {
+    background-color: red;
+}
+
+.lowstock {
+    background-color: orange;
+}

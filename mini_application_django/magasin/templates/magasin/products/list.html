@@ -3,6 +3,7 @@
 {% block content %}
 
 	<h1>Liste des produits</h1>
+
 	{% if products %}
 		<table>
 			<caption>
@@ -11,9 +12,16 @@
 			</caption>
 			<thead>
 				<tr>
-					<th scope="col">référence</th>
-					<th scope="col">nom</th>
-					<th scope="col">stock</th>
+					<th scope="col">
+						<a href="?o=ref">référence</a>
+					</th>
+					<th scope="col">
+						<a href="?o=name">nom</a>
+					</th>
+					<th scope="col">
+						<a href="?o=stock">stock</a>
+					</th>
+
 				</tr>
 			</thead>
 			<tbody>
@@ -23,7 +31,13 @@
 							<a href="/produit/{{product.ref}}">{{product.ref}}</a>
 						</td>
 						<td>{{product.name}}</td>
-						<td>{{product.stock}}</td>
+						{% if product.stock == 0 %}
+							<td class="outstock">{{product.stock}}</td>
+						{% elif product.stock < 5 %}
+							<td class="lowstock">{{product.stock}}</td>
+						{% else %}
+							<td>{{product.stock}}</td>
+						{% endif %}
 					</tr>
 				{% endfor %}
 			</tbody>

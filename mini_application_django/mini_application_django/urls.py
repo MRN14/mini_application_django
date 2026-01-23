@@ -21,5 +21,6 @@ from magasin import views
 urlpatterns = [
     path('', views.home ),
     path('produits/', views.list),
+    path('produit/<str:ref>/', views.detail),
     path('admin/', admin.site.urls),
 ]

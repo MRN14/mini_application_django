@@ -13,6 +13,15 @@ def list(request):
     context = {
         "products": products,
         "count" : count,
-        "title": "magasin DGA - liste produits"
+        "title": "magasin DGA - liste produits",
+
     }
     return render(request, "magasin/products/list.html", context)
+
+def detail(request, ref):
+    product = Product.objects.get(ref=ref)
+    context = {
+        "product": product,
+        "title": product.name
+    }
+    return render(request, "magasin/products/detail.html", context)
