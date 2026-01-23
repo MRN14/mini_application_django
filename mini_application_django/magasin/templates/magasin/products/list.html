@@ -28,7 +28,7 @@
 				{% for product in products %}
 					<tr>
 						<td>
-							<a href="/produit/{{product.ref}}">{{product.ref}}</a>
+							<a href="{% url 'magasin:product:detail' product.ref %}">{{product.ref}}</a>
 						</td>
 						<td>{{product.name}}</td>
 						{% if product.stock == 0 %}

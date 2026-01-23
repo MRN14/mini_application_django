@@ -14,7 +14,6 @@ def list(request):
         "products": products,
         "count" : count,
         "title": "magasin DGA - liste produits",
-
     }
     return render(request, "magasin/products/list.html", context)
 

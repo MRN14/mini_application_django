@@ -1,6 +1,6 @@
 {% extends "magasin/includes/base.html" %}
 
 {% block content %}
-	<h1>Hello Home!</h1>
-	<a href="/produits">voir le magasin</a>
+<h1>Hello Home!</h1>
+<a href="{% url 'magasin:product:list' %}">voir le magasin</a>
 {% endblock %}

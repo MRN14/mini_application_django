@@ -8,7 +8,7 @@
 	<h1>{{ product.name }}</h1>
 	<p>stock:
 		{{ product.stock }}</p>
-	<a href="/produits">
+	<a href="{% url 'magasin:product:list' %}">
 		&#60;-- retour à la liste</a>
 
 
